@@ -1,5 +1,6 @@
 package com.wahidhasyim.movieapp.presentation.detail
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +42,19 @@ class DetailFragment : BaseFragment<DetailViewModelImpl, FragmentDetailBinding>(
         }
         btnRemoveFavorite.setOnClickListener {
             viewModel.deleteFavoriteMovie(args.MovieItem)
+        }
+        btnShare.setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(
+                    Intent.EXTRA_TEXT,
+                    args.MovieItem.title
+                )
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, "Share via")
+            startActivity(shareIntent)
         }
     }
 
