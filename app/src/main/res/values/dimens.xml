@@ -5,4 +5,5 @@
     <dimen name="standardMargin">8dp</dimen>
     <dimen name="halfMargin">8dp</dimen>
     <dimen name="longMargin">16dp</dimen>
+    <dimen name="_24sdp">24dp</dimen>
 </resources>
