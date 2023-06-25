@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="parentPadding">12dp</dimen>
+    <dimen name="standardMargin">8dp</dimen>
+    <dimen name="halfMargin">8dp</dimen>
+    <dimen name="longMargin">16dp</dimen>
+</resources>
