@@ -1,6 +1,5 @@
 package com.wahidhasyim.movieapp.presentation.favorite
 
-import android.app.ActionBar
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
@@ -19,13 +18,13 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class FavoriteFragment : BaseFragment<FavoriteViewModelImpl, FragmentFavoriteBinding>(), FavoriteAdapter.Listener {
 
-    private val viewModel: FavoriteViewModelImpl by viewModels() 
+    private val viewModel: FavoriteViewModelImpl by viewModels()
     private val adapter by lazy { FavoriteAdapter(this) }
 
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentFavoriteBinding
         get() = FragmentFavoriteBinding::inflate
 
-    override fun getVM(): FavoriteViewModelImpl? = viewModel
+    override fun getVM(): FavoriteViewModelImpl = viewModel
 
     override fun getLayoutResource(): Int = R.layout.fragment_favorite
 
