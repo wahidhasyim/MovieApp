@@ -21,145 +21,138 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipe_refresh"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <androidx.core.widget.NestedScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/acivBanner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@color/black" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/acivBanner"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:src="@color/black" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/parentPadding"
+                android:layout_marginStart="@dimen/parentPadding"
+                android:layout_marginTop="195dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="@dimen/parentPadding"
+                android:src="@drawable/ic_round_favorite"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@id/btnShare"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnFavorite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/parentPadding"
-                    android:layout_marginTop="195dp"
-                    android:background="@drawable/bg_button"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:padding="@dimen/parentPadding"
-                    android:src="@drawable/ic_round_favorite"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toStartOf="@id/btnShare"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="@dimen/parentPadding"
-                    android:visibility="visible"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnRemoveFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/parentPadding"
+                android:layout_marginStart="@dimen/parentPadding"
+                android:layout_marginTop="195dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="@dimen/parentPadding"
+                android:src="@drawable/round_heart_broken_24"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:tint="@color/colorPrimary"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@id/btnShare"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnRemoveFavorite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/parentPadding"
-                    android:layout_marginTop="195dp"
-                    android:background="@drawable/bg_button"
-                    android:backgroundTint="@color/colorAccent"
-                    android:padding="@dimen/parentPadding"
-                    android:src="@drawable/round_heart_broken_24"
-                    android:tint="@color/colorPrimary"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toStartOf="@id/btnShare"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="@dimen/parentPadding"
-                    android:visibility="invisible"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/parentPadding"
+                android:layout_marginStart="@dimen/parentPadding"
+                android:layout_marginTop="195dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:drawablePadding="@dimen/parentPadding"
+                android:drawableStart="@drawable/round_share_24"
+                android:padding="@dimen/parentPadding"
+                android:src="@drawable/round_share_24"
+                android:text="Share"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:tint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnShare"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/parentPadding"
-                    android:layout_marginTop="195dp"
-                    android:background="@drawable/bg_button"
-                    android:backgroundTint="@color/colorPrimaryDark"
-                    android:drawablePadding="@dimen/parentPadding"
-                    android:drawableStart="@drawable/round_share_24"
-                    android:tint="@color/white"
-                    android:padding="@dimen/parentPadding"
-                    android:src="@drawable/round_share_24"
-                    android:text="Share"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="@dimen/parentPadding"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actvTitleTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/parentPadding"
+                android:text="Title"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/btnFavorite" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/actvTitleTag"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/parentPadding"
-                    android:text="Title"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/btnFavorite" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/parentPadding"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/actvTitleTag" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/actvTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/parentPadding"
-                    android:textColor="@color/black"
-                    app:layout_constraintTop_toBottomOf="@id/actvTitleTag" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actvOverviewTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/parentPadding"
+                android:text="@string/text_overview"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/actvTitle" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/actvOverviewTag"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/parentPadding"
-                    android:text="@string/text_overview"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/actvTitle" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/parentPadding"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/actvOverviewTag" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/actvDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/parentPadding"
-                    android:textColor="@color/black"
-                    app:layout_constraintTop_toBottomOf="@id/actvOverviewTag" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actvReviewTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/parentPadding"
+                android:text="@string/text_review"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/actvDescription" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/actvReviewTag"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/parentPadding"
-                    android:text="@string/text_review"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/actvDescription" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standardMargin"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/actvReviewTag"
+                tools:listitem="@layout/item_review" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvReviews"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/standardMargin"
-                    android:nestedScrollingEnabled="false"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintTop_toBottomOf="@id/actvReviewTag"
-                    tools:listitem="@layout/item_review" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.core.widget.NestedScrollView>
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
